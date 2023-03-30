@@ -8,3 +8,12 @@ input[type="text"] {
   margin: 0 auto;
   display: block;
 }
+
+#triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid blue;
+}

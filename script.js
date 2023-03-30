@@ -21,11 +21,3 @@ function getRandomColor() {
   }
   return color;
 }
-
-const fontSizeInput = document.getElementById('font-size');
-const text = document.getElementById('text');
-
-fontSizeInput.addEventListener('input', (e) => {
-  const fontSize = e.target.value + 'px';
-  text.style.fontSize = fontSize;
-});

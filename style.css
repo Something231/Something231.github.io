@@ -1,0 +1,10 @@
+body {
+  background-color: purple;
+}
+
+input[type="text"] {
+  font-size: 48px;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}

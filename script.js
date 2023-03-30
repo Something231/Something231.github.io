@@ -1,9 +1,23 @@
-const input = document.querySelector('input[type="text"]');
-input.addEventListener('input', () => {
-  document.body.style.backgroundColor = 'pink';
+const input = document.getElementById('text-input');
+let previousColor = 'white';
+
+input.addEventListener('input', (e) => {
+  const currentColor = getRandomColor();
+  document.body.style.backgroundColor = currentColor;
+  previousColor = currentColor;
 });
-const triangle = document.getElementById('triangle');
-document.addEventListener('mousemove', (e) => {
-  triangle.style.left = e.pageX + 'px';
-  triangle.style.top = e.pageY + 'px';
+
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Backspace') {
+    document.body.style.backgroundColor = previousColor;
+  }
 });
+
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
